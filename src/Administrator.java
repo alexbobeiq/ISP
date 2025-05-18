@@ -20,9 +20,8 @@ public class Administrator {
         }
     }
 
-    public void stergeUtilizator(Utilizator utilizator) {
-        System.out.println("Utilizatorul cu ID " + utilizator.getId() + " a fost șters de administratorul " + adminId);
-        // Ar trebui să existe un sistem de gestionare a utilizatorilor pentru a șterge efectiv
+    public List<String> getPermisiuni() {
+        return permisiuni;
     }
 
     // Getters and setters
