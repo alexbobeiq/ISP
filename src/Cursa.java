@@ -11,16 +11,19 @@ public class Cursa {
     private LocalDateTime timpDestinatie;
     private Pasager pasager;
     private Sofer sofer;
+    private Vehicul vehicul;
 
     public StatusCursa getStatus() {
         return status;
     }
 
-    public Cursa(int cursaId, String punctDePlecare, String destinatie) {
+    public Cursa(int cursaId, String punctDePlecare, String destinatie, Vehicul vehicul, Pasager pasager) {
         this.cursaId = cursaId;
         this.punctDePlecare = punctDePlecare;
         this.destinatie = destinatie;
         this.status = StatusCursa.solicitata;
+        this.vehicul = vehicul;
+        this.pasager = pasager;
     }
 
     public void pornesteCursa() {

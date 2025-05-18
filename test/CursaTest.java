@@ -9,17 +9,25 @@ public class CursaTest {
 
     @BeforeEach
     public void setup() {
+        Vehicul vehicul = new Vehicul();
+        vehicul.setNrMatriculare("B123XYZ");
+        vehicul.setMarca("Dacia");
+        vehicul.setModel("Logan");
+        vehicul.setAn(2018);
+        vehicul.setCuloare("Gri");
+        vehicul.setSerieSasiu("SH987654321");
+
         sofer = new Sofer();
         sofer.setId(1);
         sofer.setNume("Test Sofer");
+        sofer.adaugaVehicul(vehicul);
 
         pasager = new Pasager();
         pasager.setId(2);
         pasager.setNume("Test Pasager");
 
-        cursa = new Cursa(101, "Universitate", "Piața Unirii");
+        cursa = new Cursa(101, "Universitate", "Piața Unirii", vehicul, pasager);
         cursa.setSofer(sofer);
-        cursa.setPasager(pasager);
     }
 
     @Test

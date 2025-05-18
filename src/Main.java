@@ -34,8 +34,7 @@ public class Main {
         sofer.adaugaVehicul(vehicul);
 
         // CURSA 1
-        Cursa cursa1 = new Cursa(1, "Str. Aviatorilor", "Piața Victoriei");
-        cursa1.setPasager(pasager1);
+        Cursa cursa1 = new Cursa(1, "Str. Aviatorilor", "Piața Victoriei", vehicul, pasager1);
         cursa1.setSofer(sofer);
 
         cursa1.pornesteCursa();
@@ -53,7 +52,7 @@ public class Main {
         pasager1.adaugaRating(sofer, 4); // Rating pasager 1
 
         // CURSA 2
-        Cursa cursa2 = new Cursa(2, "Universitate", "Piața Unirii");
+        Cursa cursa2 = new Cursa(2, "Universitate", "Piața Unirii", vehicul, pasager2);
         cursa2.setPasager(pasager2);
         cursa2.setSofer(sofer);
 
